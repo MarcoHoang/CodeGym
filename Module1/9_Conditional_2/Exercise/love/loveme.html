@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do You Love Me?</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* căn giữa theo chiều dọc màn hình */
+            align-items: center;
+            height: 100vh; /* = 100% chiều cao màn hình */
+            background-color: pink;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            font-size: 2rem;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        button {
+            font-size: 25px;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            cursor: pointer; /* di chuyển vào nút chuột hiện hình bàn tay */
+        }
+        .yes {
+            background-color: lightgreen;
+        }
+        .no {
+            background-color: lightcoral;
+            position: absolute; /*thuộc tính để có thể di chuyển trên màn hình */
+        }
+    </style>
+</head>
+<body>
+    <h1 style="margin-left: 111px;">Do you love me?</h1>
+    <div class="buttons">
+        <button class="yes" onclick="showLove()">YES</button>
+        <button class="no" onmouseover="moveNoButton()">NO</button>
+    </div>
+
+    <script>
+        function showLove() {
+            alert('<3');
+        }
+
+        function moveNoButton() {
+            const noButton = document.querySelector('.no');
+            const x = Math.random() * (window.innerWidth - 100);
+            const y = Math.random() * (window.innerHeight - 50);
+            noButton.style.left = `${x}px`;
+            noButton.style.top = `${y}px`;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    
+  </head>
+  <body>
+    <script>
+        let n = prompt('Nhập vào 1 chuỗi số: ');
+        function insertDash(num) {
+            let result = num[0]; 
+            for (let i = 1; i < num.length; i++) {
+        if (num[i - 1] % 2 === 0 && num[i] % 2 === 0) {
+            result += "-";
+        }
+        result += num[i];
+    }
+    return result;
+    }
+    document.write(insertDash(n)); 
+    </script>
+  </body>
+</html>

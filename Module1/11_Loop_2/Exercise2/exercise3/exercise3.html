@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        
+      </head>
+      <body>
+        <script>
+            // console.log(String.fromCharCode(9733));
+            function triangleBottomLeft(n) {  // tam giác vuông với góc vuông ở dưới trái
+            for (let i = 1; i <= n; i++) {
+                // document.write('*'.repeat(i) + '<br>'); // hiện ra chuỗi * có độ dài = i
+                console.log(' '.repeat(n-i) + '*'.repeat(i)); // hiện ra chuỗi * có độ dài = i
+            }
+        }
+            triangleBottomLeft(5);
+
+            function triangleTopLeft(n) {  // tam giác vuông với góc vuông ở trên trái
+            for (let i = n; i > 0; i--) {
+                // document.write('*'.repeat(i) + '<br>'); // hiện ra chuỗi * có độ dài = i
+                console.log(' '.repeat(n-i) + '*'.repeat(i)); // hiện ra chuỗi * có độ dài = i
+            }
+        }
+            triangleTopLeft(5);
+
+            function triangleBottomRight(n) {  // tam giác vuông với góc vuông ở dưới phải
+            for (let i = 1; i <= n; i++) {
+                // document.write('&nbsp;'.repeat(n-i) + '*'.repeat(i) + '<br>'); // hiện ra chuỗi * có độ dài = i
+                console.log(' '.repeat(n-i) + '*'.repeat(i)); // hiện ra chuỗi * có độ dài = i
+            }
+        }
+            triangleBottomRight(5);
+
+            function triangleTopRight(n) {  // tam giác vuông với góc vuông ở trên phải
+            for (let i = n; i > 0; i--) {
+                // document.write('&nbsp;'.repeat(n-i) + '*'.repeat(i)  + '<br>'); // hiện ra chuỗi * có độ dài = i
+                console.log(' '.repeat(n-i) + '*'.repeat(i)); // hiện ra chuỗi * có độ dài = i
+            }
+        }
+            triangleTopRight(5);
+
+        </script>
+      </body>
+</html>

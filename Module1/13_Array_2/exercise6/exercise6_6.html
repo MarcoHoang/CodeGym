@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+        <script>
+           let char = prompt('Nhập vào 1 mảng ký tự: ');
+           let arr = char.split("");  // Chuỗi thành mảng 
+           for ( let i =0; i < arr.length; i++ ) {
+                if ( arr[i] === '-' ) {
+                    arr[i] = '_';
+                }
+           }
+           let char1 = arr.join("");  // Mảng thành chuỗi
+           console.log(char1);
+        </script>
+    </body>
+</html>

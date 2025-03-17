@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+        <script>
+            let num = [-1111, -111, -11, -1, 0, 1, 11, 111, 1111, 11111];
+            let count = 0;
+            let num10 = [];
+            for ( let i = 0; i < num.length; i++ ) {
+                if ( num[i] >= 10 ) {
+                    num10.push(num[i]);
+                    count++;
+                }
+            }
+            console.log(`Có ${count} số trong mảng lơn hơn hoặc bằng 10 là ${num10}`);
+        </script>
+    </body>
+</html>

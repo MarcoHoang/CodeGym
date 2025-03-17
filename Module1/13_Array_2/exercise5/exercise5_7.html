@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+        <script>
+            let num = [-1111, -111, -11, -1, 0, 1, 11, 111, 1111, 11111];
+            let v = parseInt(prompt('Nhập vào 1 số nguyên: '));
+            if ( num.includes(v) ) {   // check v có nằm trong mảng không
+                console.log(`${v} thuộc mảng`)
+                num.splice(num.indexOf(v),1);
+                num.push(0);
+                
+            } else {
+                console.log(`${v} không thuộc mảng`);
+            };
+            console.log(num);
+            
+        </script>
+    </body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title> Form </title>
+        <style>
+            .title1 {
+                color: rgb(255, 9, 9); 
+                font-size: 24px; 
+                font-weight: bold;
+                text-align: left;
+            }
+        </style>
+        <style>
+            .form-group {
+                display: flex;
+                align-items: center;
+                gap: 1px; /* Điều chỉnh khoảng cách giữa label và input */
+            }
+        
+            label {
+                width: 100px; /* Đảm bảo các nhãn thẳng hàng */
+                color:rgb(68, 0, 255); /* Đổi màu chữ của nhãn */
+                ;font-weight: bold;
+            }
+        
+            input {
+                padding: 5px;
+                border: 1px solid gray;
+            }
+        </style>
+    </head>
+    <body>
+        <h2 class="title1">ĐĂNG KÝ HỌC VIÊN</h2>
+        <p class="form-group">
+            <label for="yourname" style="color: blue;">Họ và tên</label>
+            <input type="text" id="yourname" name="yourname" size="30">
+        </p>
+        <p class="form-group">
+            <label for="date" style="color: blue;">Ngày sinh</label>
+            <input type="text" id="date" name="date" size="20">
+        </p>
+        <p class="form-group">
+            <label for="gender-male" style="color: blue;">Giới tính</label> 
+            <input type="radio" id="gender-male" name="gender" value="male">
+            <label for="gender-male">Nam</label>
+            
+            <input type="radio" id="gender-female" name="gender" value="female">
+            <label for="gender-female">Nữ</label>
+        </p>
+        <p class="form-group">
+            <label for="register" style="color: blue;">Đăng ký</label>
+            <input type="text" id="register" name="register" style="width: 300px; height: 60px; ">       
+        </p>
+        <p class="form-group">
+            <label for="class" style="color: blue;">Lớp</label>
+            <select id="class">
+                <option value="">--Chọn lớp--</option>
+                <option value="6">Lớp 6</option>
+                <option value="7">Lớp 7</option>
+                <option value="8">Lớp 8</option>
+                <option value="9">Lớp 9</option>
+                <option value="10">Lớp 10</option>
+                <option value="11">Lớp 11</option>
+                <option value="12">Lớp 12</option>
+            </select>
+        </p>
+        <p class="form-group">
+            <label for="email" style="color: blue;">Email</label>
+            <input type="text" id="email" name="email" size="25">
+        </p>
+        <p class="form-group">
+            <label for="phone" style="color: blue;">Số điện thoại</label>
+            <input type="text" id="phone" name="phone" size="25">
+        </p>
+        <p>
+            <span><input type = "button" name="register" value="Đăng ký"></span>
+            <span><input type = "button" name="reset" value="Nhập lại"></span>
+        </p>
+    </body>

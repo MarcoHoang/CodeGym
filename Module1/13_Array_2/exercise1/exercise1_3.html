@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    
+  </head>
+  <body>
+    <script>
+        let chain = 'Watashi Ha Mainichi Nihonggo Wo Benkyoushimasu';
+        let UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        let LOWER = 'abcdefghijklmnopqrstuvwxyz';
+
+        let result = [];
+        for ( let i = 0; i < chain.length; i++ ) {
+            if ( UPPER.indexOf(chain[i]) !== -1 ) { // kiểm tra phần từ chain[i] có viết hoa không 
+                result.push(chain[i].toLowerCase());
+            } else if ( LOWER.indexOf(chain[i]) !== -1 ) { // kiểm tra phần từ chain[i] có viết thường không
+                result.push(chain[i].toUpperCase());
+            } else {
+                result.push(chain[i]);
+            }
+        } 
+        document.write(result.join(''));
+        // console.log(result.join(''));
+    </script>
+  </body>
+</html>

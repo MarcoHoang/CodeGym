@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    
+  </head>
+  <body>
+    <script>
+      function fibonacci(n) {
+       let a = 0;
+       let b = 1;
+       let fibonacci = [a,b];
+       for ( let i = 2; i < n; i++ ) {
+          let nextnumber = a + b;
+          fibonacci.push(nextnumber);
+          a = b;
+          b = nextnumber;
+       }
+       return fibonacci;
+      }
+      document.write(fibonacci(10));
+    </script>
+  </body>
+</html>

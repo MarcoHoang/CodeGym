@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+        <script>
+            let num = [-1111, -111, -11, -1, 0, 1, 11, 111, 1111, 11111];
+            let count = 0;
+            let max = num[0];
+            for ( let i = 0; i < num.length; i++ ) {
+                if ( max < num[i] ) {
+                    max = num[i];
+                    count++;
+                }
+            }
+            console.log(`Phần từ có giá trị lớn nhất trong mảng là ${max} nằm ở vị trí thứ ${count} trong mảng`);
+        </script>
+    </body>
+</html>

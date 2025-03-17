@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+        <script>
+            let num = [-1111, -111, -11, -1, 0, 1, 11, 111, 1111, 11111];
+            // num.sort((a,b) => b - a);
+            // console.log(num);
+            let order = 0;
+            for ( let i = 0; i < num.length; i++ ) {
+                for ( let j = 0; j < num.length - 1 - i; j++ ) {
+                    if ( num[j] < num[j+1] ) {
+                        order = num[j];
+                        num[j] = num[j + 1];
+                        num[j + 1] = order;
+                    }
+                }
+            }
+            console.log(num);
+        </script>
+    </body>
+</html> 

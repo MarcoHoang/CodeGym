@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+        <script>
+           let desire = prompt('Nhập vào điều mà bạn mong muốn: ');
+           console.log(desire.length);
+           console.log(desire);
+           let words = desire.trim();
+           console.log(words);
+           console.log(words.length);
+           let count1 = 0;
+           let count2 = 0;
+           for ( let i = 1; i < words.length; i++ ) {
+                if ( words[i] === ' ') {
+                    if ( words[i -1] !== ' ' && words[i +1] !== ' ' ) {
+                        count1++;
+                    } else if ( words[i -1] !== ' ' ||  words[i +1] !== ' ' ) {
+                        count2++;
+                    }
+                }
+           }
+           console.log(count1);
+           console.log(count2);
+           console.log(`Số từ trong chuỗi là ${count1 + 1 + count2 / 2}`);
+
+        // function countwwords(str) {
+        //     let words = str.trim().split(/\s+/);     // split(/\s+/) : tách chuỗi bằng dấu cách thành các mảng từ
+        //     return words.length;
+        // }
+        // console.log(`Số từ trong chuỗi là ${countwwords(desire)}`);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    
+  </head>
+  <body>
+    <input type="text" id="eng" style="width: 200px;" placeholder="Nhập vào 1 từ tiếng anh"> 
+    <input type="button" id="trans" value="Dịch">
+    <p id="result"></p>
+    <script>
+        // let word = prompt('Nhập vào 1 từ tiếng anh: ');
+        // let english = ['me', 'you', 'father', 'mother'];
+        // let vietnamese = ['tôi', 'bạn', 'bố', 'mẹ'];
+
+        document.getElementById('trans').addEventListener('click', function() {
+            let word = document.getElementById('eng').value.toLowerCase();
+            let english = ['me', 'you', 'father', 'mother'];
+            let vietnamese = ['tôi', 'bạn', 'bố', 'mẹ'];
+            let index = english.indexOf(word);
+            
+            if ( index !== -1 ) {
+                document.getElementById('result').innerText = word + ' nghĩa là ' + vietnamese[index];
+            } else {
+                document.getElementById('result').innerText = 'Không tìm thấy nghĩa từ này!'
+            }
+        });
+        
+    </script>
+  </body>
+</html>
