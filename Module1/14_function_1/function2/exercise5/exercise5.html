@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+        <script>
+            function number(num1, num2, num3) {
+                let min = num1;
+                if ( min > num2 ) {
+                    min = num2;
+                    if ( min > num3 ) {
+                        min = num3;
+                        return min;
+                    }
+                } else {
+                    if ( min > num3 ) {
+                        min = num3;
+                        return min;
+                    }
+                }
+                return min;
+            }
+            let a = parseFloat(prompt('Nhập vào 1 số thực: '));
+            let b = parseFloat(prompt('Nhập vào 1 số thực: '));
+            let c = parseFloat(prompt('Nhập vào 1 số thực: '));
+            alert(`Số nhỏ nhất trong 3 số là: ${number(a, b, c)}`);
+        </script>
+    </body>
+</html>

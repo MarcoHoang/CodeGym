@@ -16,7 +16,7 @@
         // let vietnamese = ['tôi', 'bạn', 'bố', 'mẹ'];
 
         document.getElementById('trans').addEventListener('click', function() {
-            let word = document.getElementById('eng').value.toLowerCase();
+            let word = document.getElementById('eng').value.toLowerCase().trim();
             let english = ['me', 'you', 'father', 'mother'];
             let vietnamese = ['tôi', 'bạn', 'bố', 'mẹ'];
             let index = english.indexOf(word);

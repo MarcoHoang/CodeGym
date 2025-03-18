@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+        <script>
+            function swap(num1, num2) {
+                alert(`Trước khi đổi, num1 là ${num1} và num2 là ${num2}`);
+                let num = num1;
+                num1 = num2;
+                num2 = num;
+                return alert(`Sau khi đổi, num1 là ${num1} và num2 là ${num2}`);
+            };
+            swap(11, -11);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+        <script>
+           function argument(argument1, argument2) {
+                if ( argument1 > argument2 ) {
+                    alert(`Tham số ${argument1} lớn hơn tham số ${argument2}`);
+                } else {
+                    return argument1 + argument2;
+                }
+           }
+           let a = parseFloat(prompt('Nhập vào 1 số: '));
+           let b = parseFloat(prompt('Nhập vào 1 số: '));
+           alert('Tổng 2 tham số là: ' + argument(a, b));
+        </script>
+    </body>
+</html>

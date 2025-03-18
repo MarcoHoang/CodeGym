@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+        <script>
+            function circlePerimeter(radius) {
+                return 2 * Math.PI * radius;
+            };
+            function circleAcreage(radius) {
+                return Math.PI * radius * radius;
+            };
+            let r = parseFloat(prompt('Nhập vào 1 số: '));
+            if ( r > 0 ) {
+                alert(`Chu vi của hình tròn là: ${circlePerimeter(r)} \nDiện tích của hình tròn là: ${circleAcreage(r)}`);
+            } else {
+                alert(`Hãy nhập vào 1 số thực dương!`);
+            };
+        </script>
+    </body>
+</html>

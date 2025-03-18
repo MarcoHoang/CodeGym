@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+        <script>
+            function factorial(num) {
+                let factor = 1;
+                for ( let i = 1; i <= num; i++ ) {
+                    factor *= i;
+                }
+                return factor;
+            };
+            let n = Number(prompt('Nhập vào 1 số tự nhiên: '));
+            alert(`Giai thừa của ${n} là ${factorial(n)}`);
+        </script>
+    </body>
+</html> 

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+        <script>
+            function number(num) {
+                if ( num <= 0 ) {
+                    return `${num} không phải số nguyên dương`;
+                } else {
+                    if ( num % 1 == 0 ) {
+                        return `${num} là số nguyên dương`;
+                    } else {
+                        return `${num} không là số nguyên dương`;
+                    }
+                }
+            }
+            let n = parseFloat(prompt('Nhập vào 1 số: '));
+            alert(number(n));
+        </script>
+    </body>
+</html>

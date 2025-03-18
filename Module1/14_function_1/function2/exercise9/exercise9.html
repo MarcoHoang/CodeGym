@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+        <script>
+            function appear(array, char) {
+                let count = 0;
+                for ( let i = 0; i < array.length; i++ ) {
+                    if ( char == array[i] ) {
+                        count++;
+                    }
+                }
+                return count;
+            }
+            let array = ['T', 'r', 'a', 'n', 'H', 'o', 'a', 'n', 'g', 1, 11, 111];
+            let char = 'n';
+            let count1 = appear(array,char);
+            if ( count1 == 0 ) {
+                alert(`Ký tự ${char} không nằm trong mảng!`);
+            } else {
+                alert(`Ký tự ${char} xuất hiện ${count1} lần trong mảng.`)
+            }
+        </script>
+    </body>
+</html>

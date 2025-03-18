@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+        <script>
+            function isPalindrome(chain) {
+                let count = 0;
+                for ( let i = 0; i < chain.length / 2 ; i++ ) {
+                        if ( chain[i] == chain[chain.length - i - 1] ) {
+                            // chain = chain.slice(1, -1);  // bỏ phần từ đầu tiên và cuối cùng và không thay đổi mảng gốc
+                            count++;
+                        }
+                }
+                if ( count == chain.length /2 || count == (chain.length + 1) / 2 ) {
+                    return `chuỗi là đối xứng`;
+                } else {
+                    return `chuỗi không đối xứng`;
+                }
+            }
+            let chain1 = prompt('Nhập vào 1 chuỗi: ');
+            alert(isPalindrome(chain1));
+        </script>
+    </body>
+</html>
