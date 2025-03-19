@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+        <script>
+            let a = [2, 3, 4, 5];
+            let a2 = [-2, 3, 4, -5];
+            let a3 = [21, -3, 4, 5];
+            let a4 = [2, 31, 54, 55];
+            let x = [a, a2, a3, a4];
+            // let sum = 0; 
+
+            // for ( let i = 0; i < x.length; i++ ) {
+            //     for ( let j = 0; j < x[i].length; j++ ) {
+            //         sum += x[i][j];
+            //     }
+            // }
+            let sum = 0;
+
+            for ( let i = x.length - 1; i >= 0; i-- ) {
+                sum += x[i][x.length - i - 1];
+            }
+            document.write(`${sum}`);
+
+        </script>
+    </body>
+</html>

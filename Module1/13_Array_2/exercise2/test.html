@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <h2>Từ điển Anh - Việt</h2>
+    <input type="text" id="inputWord" placeholder="Nhập từ tiếng Anh...">
+    <button onclick="translateWord()">Dịch</button>
+    <p id="result"></p>
+</table>
+<script>
+    let english = ['me', 'you', 'father', 'mother'];
+    let vietnamese = ['tôi', 'bạn', 'bố', 'mẹ'];
+    function translateWord() {
+        let getdata = document.getElementById("inputWord").value;
+        let index = english.indexOf(getdata);
+        for(let i = 0; i < english.length; i++) {
+            // console.log(vietnamesewords[index]);
+            document.getElementById("result").innerText = vietnamese[index];
+            if(index == -1){
+                document.getElementById("result").innerText = "Có Cái Nịt";
+            }
+        }
+        document.getElementById("inputWord").value = "";
+    }
+</script>
+</body>
+</html> 

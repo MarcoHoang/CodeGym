@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+        <script>
+            function Apple (type) {
+                this.type = type;
+                this.color = "red";
+            }
+            Apple.prototype.getInfo = function() {
+                return this.color + ' ' + this.type + ' apple';
+            };
+
+            // let apple = {
+            //     type: "macintosh",
+            //     color: "red",
+            //     getInfo: function () {
+            //         return this.color + ' ' + this.type + ' apple';
+            //     }
+            // }
+
+            // let apple = new function() {
+            //     this.type = "macintosh";
+            //     this.color = "red";
+            //     this.getInfo = function () {
+            //         return this.color + ' ' + this.type + ' apple';
+            //     };
+            // }
+        </script>
+    </body>
+</html>

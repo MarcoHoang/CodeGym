@@ -8,7 +8,11 @@
         <script>
             let a = [-1111, -111, -11, -1, 0, 1, 11, 111, 1111, 11111];
             let b = [33333, 3333, 333, 33, 3, 0, -3, -33, -333, -3333]
-            let c = a.concat(b);
+            for ( let i = 0; i < b.length; i++ ) {
+                a.push(b[i]);
+            };
+            // let c = a.concat(b);
+            let c = a;
             console.log(c);
         </script>
     </body>
