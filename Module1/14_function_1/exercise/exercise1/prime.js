@@ -2,9 +2,11 @@
 //     num = parseInt(num);
 //     if ( isNaN(num) || num <= 1 ) {
 //         return `${num} không phải số nguyên tố!`;
-//     } else if ( num <=3 ) {
+//     }
+//     if ( num <=3 ) {
 //         return `${num} là số nguyên tố!`;
-//     } else {
+//     } 
+//     if ( n >= 4 ) {
 //         for ( let i = 2; i <= Math.sqrt(num); i++ ) {
 //             if ( num % i == 0 ) {
 //                 return `${num} không phải số nguyên tố!`;
@@ -22,9 +24,11 @@ function prime(num) {
     num = parseInt(num);
     if ( isNaN(num) || num <= 1 ) {
         return "";
-    } else if ( num <=3 ) {
+    }
+    if ( num <=3 ) {
         return `${num}`;
-    } else {
+    } 
+    if ( num >= 4 ) {
         for ( let i = 2; i <= Math.sqrt(num); i++ ) {
             if ( num % i == 0 ) {
                 return "";

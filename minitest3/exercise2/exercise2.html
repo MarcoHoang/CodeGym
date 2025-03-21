@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function medium(math, english, literature) {
+            let medium = (math + english + literature) / 3;
+            if ( medium < 5 ) {
+                return `Không đạt`;
+            } else if ( medium < 8 ) {
+                return `Đạt`;
+            } else {
+                return `Tốt`;
+            }
+        }
+        console.log(medium(10,10,5));
+    </script>
+</body>
+</html>

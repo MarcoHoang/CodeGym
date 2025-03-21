@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Delete(arr, n) {
+            let index = arr.indexOf(n);
+            let arrnew = arr ;
+            if ( index !== -1 ) {
+                arrnew.splice(index, 1);
+            }
+            return arrnew;
+        }
+        let arr = [1,2,3];
+        let arr1 = Delete(arr, 3);
+        console.log(arr1);
+    </script>
+</body>
+</html>

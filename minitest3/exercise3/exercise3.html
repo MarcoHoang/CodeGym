@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function evenNumber(arr, n) {
+            let count = 0;
+            for ( let i = 0; i < n; i++ ) {
+                if ( arr[i] % 2 == 0) {
+                    count++;
+                }
+            }
+            return count;
+        }
+        let n = parseInt(prompt('Nhập vào số phần tử của mảng là 1 số nguyên dương: '));
+        let input = prompt(`Nhập mảng có ${n} phần tử, mỗi phần tử cách nhau bởi dấu cách: `);
+        let arr = input.split(" ").map(Number);
+        if ( arr.length !== n) {
+            alert('Hãy nhập mảng có n phần tử: ');
+        } else {
+            console.log(evenNumber(arr, n));
+        };
+    </script>
+</body>
+</html>

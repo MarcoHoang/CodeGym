@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let myMobile = function(battery, name) {
+            this.battery = battery;
+            this.name = name;
+            this.message = "";
+            this.setMessage = function(message) {
+                this.message = message;
+            }
+            this.getMessage = function() {
+                return this.message;
+            }
+            this.sendMessage = function(message, myMobile) {
+                myMobile.setMessage(message);
+            }
+        }
+        let iphone = new myMobile(50, 'Iphone');
+        let nokia = new myMobile(50, 'Nokia');
+        if ( iphone.battery > 0 && nokia.battery > 0 ) {
+            iphone.sendMessage("Message from iphone", nokia);
+            let message = nokia.getMessage();
+            console.log(message);
+        } else {
+            console.log('Điện thoại hết pin.')
+        }
+    </script>
+</body>
+</html>

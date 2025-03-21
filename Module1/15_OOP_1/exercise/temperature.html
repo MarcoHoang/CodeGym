@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+        <script>
+            let myTemperature = function(celsius) {
+                this.celsius = celsius;
+                this.getFahrenheit = function() {
+                    return (this.celsius * 1.8) + 32;
+                }
+                this.getKelvin = function() {
+                    return this.celsius + 273.15;
+                }
+            }
+            let c = parseFloat(prompt('Nhập vào 1 số: '));
+            if ( c >= -273 ) {
+                let temperature = new myTemperature(c);
+                let celsius = temperature.celsius;
+                let fahrenheit = temperature.getFahrenheit();
+                let kelvin = temperature.getKelvin();
+                alert(`${temperature.celsius}°C = ${fahrenheit}°F \n${temperature.celsius}°C = ${kelvin}K`);
+            } else {
+                alert('Nhiệt độ không thể quá thấp!');
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adam Eva</title>
+</head>
+<body>
+    <script>
+        function Apple(weight) {
+            this.weight = weight;
+            this.getWeight = function() {
+                return this.weight;
+            }
+            this.decrease = function() {
+                if ( this.weight > 0 ) {
+                    this.weight--;
+                }
+            }
+        }
+
+        function Human(name, gender, weight) {
+            this.name = name;
+            this.gender = gender;
+            this.weight = weight;
+            this.setGender = function(gender) {
+                this.gender = gender;
+            }
+            this.setName = function(name) {
+                this.name = name;
+            }
+            this.getName = function() {
+                return this.name;
+            }
+            this.setWeight = function(weight) {
+                this.weight = weight;
+            }
+            this.getWeight = function() {
+                return this.weight;
+            }
+            this.isMale = function() {
+                return this.gender === 'male'
+            }
+            this.say = function() {
+                console.log('Hello');
+            }
+            this.checkApple = function(Apple) {
+                return apple.getWeight() > 0;
+            }
+            this.eat = function(apple) {
+                if ( apple.getWeight() > 0 ) {
+                this.weight++;
+                apple.decrease();
+                }
+            }
+        }
+        let apple = new Apple(10);
+        let adam = new Human('Adam', 'male', 70);
+        let eva = new Human('Eva', 'female', 45);
+        adam.say();
+        if (adam.checkApple(apple)) {
+            adam.eat(apple);
+            console.log(adam.getWeight());
+        } else {
+            console.log('Hết táo để ăn rồi!');
+        }
+
+        eva.say();
+        if (eva.checkApple(apple)) {
+            eva.eat(apple);
+            console.log(eva.getWeight());
+        } else {
+            console.log('Hết táo để ăn rồi!');
+        }
+        console.log(apple.getWeight());
+    </script>
+</body>
+</html>

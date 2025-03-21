@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+        }
+        input {
+            padding: 10px;
+            width: 70%;
+            margin-right: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .add-pdt {
+            background-color: green;
+            color: white;
+        }
+        .edit-pdt {
+            background-color: green;
+            color: white;
+            margin-left: 5px;
+        }
+        .delete-pdt {
+            background-color: red;
+            color: white;
+            margin-left: 5px;
+        }
+        .product-list {
+            margin-top: 20px;
+        }
+        .product-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        .product-count {
+            color: red;
+            font-weight: bold;
+        }
+        .product-container {
+            display: flex;
+            align-items: center; 
+            gap: 10px; 
+        }
+    </style>
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Add New Product</h2>
+        <input type="text" id="newProduct" placeholder="New Product">
+        <button class="add-pdt" onclick="addProduct()">Add</button>
+
+        <h2>Display All Product</h2>
+        <div class="product-container">
+            <h3>Product Name</h3>
+            <p><span class="product-count" id="productCount" style="margin-left: 350px;"></span> Products</p>
+        </div>
+        <div class="product-list" id="productList"></div>
+    </div>
+    <script>
+        let products = ['Sony Xperia', 'Samsung Galaxy', 'Nokia 6', 'Xiaomi Redmi Note 8', 'Apple Iphone 16S', 'Xiaomi Mi 6s Plus', 'Apple Iphone 15 Pro Max', 'Oppo A71', 'Fujitsu F-04E'] ;
+
+        function addProduct() {
+            let productName = document.getElementById("newProduct").value.trim();
+            if ( productName ) {
+                products.push(productName);
+                productName = "";
+                displayproducts();
+            } else {
+                alert('Hãy nhập tên sản phẩm: ');
+            }
+        }
+
+        function displayproducts() {
+            let productList = document.getElementById("productList");
+            productList.innerHTML = "";
+            document.getElementById("productCount").textContent = products.length;
+
+            products.forEach((product, index) => {        // duyện từng phần tử cùng vị trí trong mảng
+                let productItem = document.createElement("div");
+                productItem.className = "product-item";
+                productItem.innerHTML = `
+                    <span>${product}</span>
+                    <div>
+                        <button class="edit-pdt" onclick="editProduct(${index})">Edit</button>
+                        <button class="delete-pdt" onclick="deleteProduct(${index})">Delete</button>
+                    </div>
+                `;
+                productList.appendChild(productItem);
+            });
+        }
+
+        function editProduct(index) {
+            let newName = prompt('Nhập vào tên sản phẩm này: ', products[index]);
+            if ( newName.trim() !== "" ) {
+                products[index] = newName.trim();
+                displayproducts();
+            }
+        }
+
+        function deleteProduct(index) {
+            if( confirm("Bạn chắc chắn muốn xóa sản phẩm này?")) {
+                products.slice(index, 1);
+                displayproducts();
+            }
+        }
+        displayproducts();
+    </script>
+</body>
+</html>
