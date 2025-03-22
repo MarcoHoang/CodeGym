@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ButtonLamp</title>
+</head>
+<body>
+    <script>
+        function ElectricLamp(status) {
+            this.status = status;
+            this.getStatus = function(status) {
+                return this.status;
+            }
+        }
+
+        function SwitchButton(status, lamp) {
+            this.status = status;
+            this.lamp = lamp;
+            this.getStatus = function() {
+                return this.status;
+            }
+            this.setLamp = function(lamp) {
+                this.lamp = lamp;
+            }
+            this.getLamp = function() {
+                return this.lamp;
+            }
+            this.connectToLamp = function(ElectricLamp) {
+                return this.lamp = ElectricLamp;
+            }
+            this.switchOff = function() {
+                this.lamp.status = false;
+                return this.status = false;
+            }
+            this.switchOn = function() {
+                this.lamp.status = true;
+                return this.status = true;
+            }
+        }
+        let lamp = new ElectricLamp(false);
+        let button = new SwitchButton(false, lamp);
+
+        console.log(button.switchOn());
+        console.log(lamp.getStatus());
+        console.log(button.switchOff());
+        console.log(lamp.getStatus());
+        console.log(button.switchOn());
+        console.log(lamp.getStatus());
+        console.log(button.switchOff());
+        console.log(lamp.getStatus());
+        console.log(button.switchOn());
+        console.log(lamp.getStatus());
+        console.log(button.switchOff());
+        console.log(lamp.getStatus());
+        console.log(button.switchOn());
+        console.log(lamp.getStatus());
+        console.log(button.switchOff());
+        console.log(lamp.getStatus());
+        console.log(button.switchOn());
+        console.log(lamp.getStatus());
+        console.log(button.switchOff());
+        console.log(lamp.getStatus());
+        console.log(button.switchOn());
+        console.log(lamp.getStatus());
+        console.log(button.switchOff());
+        console.log(lamp.getStatus());
+    </script>
+</body>
+</html>

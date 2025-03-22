@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caro Game</title>
+</head>
+<body>
+    <button onclick="start()" style="width: 80px; height: 30px; color: red; background-color:bisque;">Start</button>
+    <div id="game-board">
+    </div>
+    <style>
+        #game-board{
+            position: relative;
+            margin-top: 50px;
+        }
+        .cell{
+            border: solid 1px grey;
+            text-align: center;
+            font-size:20pt;
+            cursor: pointer;
+            color: black;
+        }
+    </style>
+    <script src="caro.js"></script>
+</body>
+</html>
