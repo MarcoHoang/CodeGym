@@ -25,38 +25,23 @@ console.log(test());
 
 // 'use strict';
 
-// function test(input) {
-//     let lines = input.trim().split("\n"); 
-//     let n = parseInt(lines[0]); 
-
-//     if (isNaN(n) || n <= 0 || n >= 1000) {
-//         return "Please enter n as a positive integer less than 1000";
-//     }
-
-//     let arr = lines[1].split(" ").map(Number);
-
-//     if (arr.length !== n) {
-//         return "The number of elements does not match n!";
-//     }
-
-//     for (let num of arr) {
-//         if (isNaN(num) || num <= 0 || num > 1000) {
-//             return "Please enter elements that are positive integers less than 1000";
-//         }
-//     }
-
-//     let sum = arr.reduce((acc, num) => acc + num, 0);
-//     return sum;
-// }
-
 // process.stdin.resume();
 // process.stdin.setEncoding("utf-8");
-// let input = "";
 
-// process.stdin.on("data", function (chunk) {
-//     input += chunk;
+// let inputString = '';
+
+// process.stdin.on("data", function (inputStdin) {
+//     inputString += inputStdin;
 // });
 
 // process.stdin.on("end", function () {
-//     console.log(test(input));
+//     let lines = inputString.trim().split("\n");
+//     let arr = lines[1].split(" ").map(Number);  // Chuyển dòng thứ 2 thành mảng số
+
+//     console.log(test(arr));  // Gọi đúng hàm `test()`
 // });
+
+// function test(arr) {
+//     let sum = arr.reduce((acc, num) => acc + num, 0);  // Tính tổng
+//     return sum;
+// }
